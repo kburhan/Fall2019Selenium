@@ -7,7 +7,6 @@ import com.automation.utilities.Driver;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 public class NewLoginTests extends AbstractTestBase {
 
 
@@ -66,7 +65,5 @@ public class NewLoginTests extends AbstractTestBase {
         };
     }
 
-    //Object[][] or Object[] or Iterator<Object[]>
-    //Object[] - 1 column with a data
-    //Object[][] 2+
+
 }

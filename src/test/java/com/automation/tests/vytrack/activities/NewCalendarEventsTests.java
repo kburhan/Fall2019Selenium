@@ -37,7 +37,6 @@ public class NewCalendarEventsTests extends AbstractTestBase {
 
     }
 
-
     @Test
     public void timeDifferenceTest() {
         test = report.createTest("Verify time difference");

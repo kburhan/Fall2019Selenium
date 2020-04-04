@@ -75,19 +75,6 @@ public class CalendarEventsPageTests {
         Assert.assertTrue(createCalendarEventBtn.isDisplayed());
     }
 
-    /**
-     * //in the @BeforeMethod
-     * Test Case: Default options
-     * Login as sales manager
-     * Go to Activities --> Calendar Events
-     *
-     *
-     * Click on Create Calendar Event
-     * Default owner name should be current user
-     * Default title should be blank
-     * Default start date should be current date
-     * Default start time should be current time
-     */
     @Test(description = "Default options")
     public void verifyDefaultValues(){
         //Click on Create Calendar Event
@@ -105,7 +92,7 @@ public class CalendarEventsPageTests {
         //date time syntax = https://www.journaldev.com/17899/java-simpledateformat-java-date-format
 
         //Default start date should be current date
-        String expectedDate = LocalDate.now().format(DateTimeFormatter.ofPattern("MMM dd, yyyy"));
+        String expectedDate = LocalDate.now().format(DateTimeFormatter.ofPattern("MMM d, yyyy"));
         String actualDate = driver.findElement(startDateBy).getAttribute("value");
 
         Assert.assertEquals(actualDate , expectedDate);

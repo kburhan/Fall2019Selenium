@@ -24,18 +24,16 @@ public abstract class AbstractTestBase {
     protected ExtentReports report;
     protected ExtentHtmlReporter htmlReporter;
     protected ExtentTest test;
+
     //@Optional - to make parameter optional
     //if you don't specify it, testng will require to specify this parameter for every test, in xml runner
     @BeforeTest
     @Parameters("reportName")
     public void setupTest(@Optional String reportName) {
-        System.out.println("Report name: "+reportName);
-        String reportNameString = report == null? "report.html" : reportName;
-
-
+        System.out.println("Report name: " + reportName);
+        reportName = reportName == null ? "report.html" : reportName+".html";
 
         report = new ExtentReports();
-
 
         String reportPath = "";
         //location of report file
